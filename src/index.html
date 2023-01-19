@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
+
+  <body class="font-std bg-white text-base">
+    <section>
+      <header class="bg-white">
+        <div
+          class="flex p-4 items-center justify-between max-w-5xl m-auto sm:border-b-2 sm:p-0 sm:py-6"
+        >
+          <div class="sm:flex sm:gap-8">
+            <div class="flex gap-4 items-center">
+              <div class="sm:hidden icon-menu">
+                <img
+                  src="../assets/images/icon-menu.svg"
+                  alt="Menu Icon"
+                  role="Toggle menu"
+                />
+              </div>
+              <a href="">
+                <h1>
+                  <img
+                    src="../assets/images/logo.svg"
+                    alt="Logo"
+                    role="Site Logo"
+                  />
+                </h1>
+              </a>
+            </div>
+
+            <nav
+              class="hidden fixed right-0 bottom-0 bg-[rgba(0,0,0,0.5)] h-full w-full nav-bar z-20 sm:flex sm:static sm:bg-transparent sm:z-0"
+            >
+              <div
+                class="bg-white p-4 h-full w-[230px] sm:bg-transparent sm:w-full sm:flex sm:p-0"
+              >
+                <div class="sm:hidden icon-close">
+                  <img
+                    class="mb-6 mt-3"
+                    src="../assets/images/icon-close.svg"
+                    alt=""
+                  />
+                </div>
+                <ul
+                  class="[&>*]:capitalize [&>*]:font-bold [&>*>*]:block [&>*]:pt-4 sm:flex sm:gap-4 sm:[&>*>*]:text-[#68707d] sm:[&>*]:pt-0"
+                >
+                  <li><a href="">collection</a></li>
+                  <li><a href="">men</a></li>
+                  <li><a href="">women</a></li>
+                  <li><a href="">about</a></li>
+                  <li><a href="">contact</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <div><img src="../assets/images/icon-cart.svg" alt="" /></div>
+            <div>
+              <img class="h-8" src="../assets/images/image-avatar.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="max-w-5xl m-auto sm:mt-12 sm:flex sm:items-center sm:gap-12">
+        <div class="relative m-auto sm:flex sm:flex-col sm:gap-4">
+          <div class="mySlides fade">
+            <div
+              class="text-[#f2f2f2] text-xs py-2 px-3 absolute top-0 sm:hidden numbertext"
+            >
+              1 / 4
+            </div>
+            <img
+              src="../assets/images/image-product-1.jpg"
+              class="w-full rounded-md"
+            />
+          </div>
+
+          <div class="mySlides fade">
+            <div
+              class="text-[#f2f2f2] sm:hidden text-xs py-2 px-3 absolute top-0 numbertext"
+            >
+              2 / 4
+            </div>
+            <img
+              src="../assets/images/image-product-2.jpg"
+              class="w-full rounded-md"
+            />
+          </div>
+
+          <div class="mySlides fade">
+            <div
+              class="text-[#f2f2f2] sm:hidden text-xs py-2 px-3 absolute top-0 numbertext"
+            >
+              3 / 4
+            </div>
+            <img
+              src="../assets/images/image-product-3.jpg"
+              class="w-full rounded-md"
+            />
+          </div>
+
+          <div class="mySlides fade ">
+            <div
+              class="text-[#f2f2f2] sm:hidden text-xs py-2 px-3 absolute top-0 numbertext"
+            >
+              4 / 4
+            </div>
+            <img
+              src="../assets/images/image-product-4.jpg"
+              class="w-full rounded-md"
+            />
+          </div>
+
+          <a
+            class="cursor-pointer absolute top-[50%] w-12 h-12 m-4 p-4 bg-white font-bold active:bg-[#000000cc] text-lg rounded-full sm:hidden prev"
+            onclick="plusSlides(-1)"
+          >
+            <img src="../assets/images/icon-previous.svg" alt="" />
+          </a>
+          <a
+            class="cursor-pointer absolute top-[50%] w-12 h-12 m-4 p-4 bg-white sm:hidden font-bold active:bg-[#000000cc] text-lg rounded-full right-0 next"
+            onclick="plusSlides(1)"
+          >
+            <img src="../assets/images/icon-next.svg" alt="" />
+          </a>
+
+          <div class="hidden sm:flex sm:gap-4 [&>*>*]:rounded-md ">
+            <div>
+              <img
+                src="../assets/images/image-product-1-thumbnail.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="../assets/images/image-product-1-thumbnail.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="../assets/images/image-product-1-thumbnail.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="../assets/images/image-product-1-thumbnail.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <br />
+
+        <div class="text-center sm:hidden">
+          <span
+            class="h-3 w-3 mx-[2px] bg-[#bbb] rounded-full inline-block transition-all dot"
+            onclick="currentSlide(1)"
+          ></span>
+          <span
+            class="h-3 w-3 mx-[2px] bg-[#bbb] rounded-full inline-block transition-all dot"
+            onclick="currentSlide(2)"
+          ></span>
+          <span
+            class="h-3 w-3 mx-[2px] bg-[#bbb] rounded-full inline-block transition-all dot"
+            onclick="currentSlide(3)"
+          ></span>
+          <span
+            class="h-3 w-3 mx-[2px] bg-[#bbb] rounded-full inline-block transition-all dot"
+            onclick="currentSlide(4)"
+          ></span>
+        </div>
+
+        <div class="p-4">
+          <div>
+            <h3 class="text-[#ff7d1a] font-bold small-caps tracking-[0.09em]">
+              sneaker company
+            </h3>
+            <h2 class="font-bold text-3xl capitalize sm:text-4xl ">
+              fall limited edition sneakers
+            </h2>
+          </div>
+          <p class="text-[#68707d] mt-4">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they'll withstand everything
+            the weather can offer.
+          </p>
+          <div class="flex mt-4 justify-between items-center">
+            <div class="flex gap-3 items-center">
+              <h4 class="text-2xl font-bold">&dollar;125.00</h4>
+              <p
+                class="text-[#ff7d1a] px-2 w-12 rounded bg-[#ffede0] font-bold"
+              >
+                50%
+              </p>
+            </div>
+            <p class="text-[#68707d] font-semibold"><s>&dollar;250.00</s></p>
+          </div>
+
+          <div class="flex gap-4 flex-col">
+            <ul
+              class="bg-[#f7f8fd] mt-4 flex justify-between p-3 rounded-lg items-center"
+            >
+              <li><img src="../assets/images/icon-minus.svg" alt="" /></li>
+              <li class="font-bold">0</li>
+              <li>
+                <img src="../assets/images/icon-plus.svg" alt="" />
+              </li>
+            </ul>
+            <div
+              class="bg-[#ff7d1a] shadow-2xl shadow-[#ffede0] flex p-3 justify-center gap-4 text-white rounded-lg"
+            >
+              <img src="../assets/images/second-cart.svg" alt="" /><input
+                type="button"
+                value="Add to cart"
+              />
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+    <div class="attribution text-[11px] text-center">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        class="text-[#3e52a3]"
+        target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#" class="text-[#3e52a3]">Somtochukwu Nnaji</a>.
+    </div>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/slider.js"></script>
+  </body>
+</html>

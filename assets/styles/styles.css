@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    --pale-orange: #ffede0;
+    --orange: #ff7d1a;
+    --very-dark-blue: hsl(220, 13%, 13%);
+    --dark-grayish-blue: #68707d;
+    --grayish-blue: #b6bcc8;
+    --light-grayish-blue: #f7f8fd;
+    --white: hsl(0, 0%, 100%);
+    --black-opacity: hsl(0, 0%, 0%);
+}
+
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.small-caps {
+    font-variant: small-caps;
+}
