@@ -10,6 +10,7 @@
       sizes="32x32"
       href="../assets/images/favicon-32x32.png"
     />
+    <link rel="stylesheet" href="../assets/fonts/fontawesome/css/all.css" />
     <link rel="stylesheet" href="../dist/output.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,14 +22,14 @@
   </head>
 
   <body class="font-std bg-white text-base">
-    <section>
+    <section class="md:p-8">
       <header class="bg-white">
         <div
-          class="flex p-4 items-center justify-between max-w-5xl m-auto sm:border-b-2 sm:p-0 sm:py-6"
+          class="flex p-4 items-center justify-between max-w-5xl min-w-[345px] m-auto md:border-b-2 md:p-0 md:py-6"
         >
-          <div class="sm:flex sm:gap-8">
+          <div class="md:flex md:gap-12">
             <div class="flex gap-4 items-center">
-              <div class="sm:hidden icon-menu">
+              <div class="md:hidden icon-menu">
                 <img
                   src="../assets/images/icon-menu.svg"
                   alt="Menu Icon"
@@ -40,6 +41,7 @@
                   <img
                     src="../assets/images/logo.svg"
                     alt="Logo"
+                    class="md:max-h-[1.5rem] md:h-[1.5rem]"
                     role="Site Logo"
                   />
                 </h1>
@@ -47,12 +49,12 @@
             </div>
 
             <nav
-              class="hidden fixed right-0 bottom-0 bg-[rgba(0,0,0,0.5)] h-full w-full nav-bar z-20 sm:flex sm:static sm:bg-transparent sm:z-0"
+              class="hidden fixed right-0 bottom-0 bg-[rgba(0,0,0,0.5)] h-full w-full nav-bar z-20 md:flex md:static md:bg-transparent md:z-0"
             >
               <div
-                class="bg-white p-4 h-full w-[230px] sm:bg-transparent sm:w-full sm:flex sm:p-0"
+                class="bg-white p-4 h-full w-[230px] md:bg-transparent md:w-full md:flex md:p-0"
               >
-                <div class="sm:hidden icon-close">
+                <div class="md:hidden icon-close">
                   <img
                     class="mb-6 mt-3"
                     src="../assets/images/icon-close.svg"
@@ -60,32 +62,119 @@
                   />
                 </div>
                 <ul
-                  class="[&>*]:capitalize [&>*]:font-bold [&>*>*]:block [&>*]:pt-4 sm:flex sm:gap-4 sm:[&>*>*]:text-[#68707d] sm:[&>*]:pt-0"
+                  class="[&>*]:capitalize [&>*]:font-bold [&>*>*]:block [&>*]:pt-4 md:flex md:gap-4 md:[&>*>*]:text-[#b6bcc8] md:[&>*]:pt-0 relative"
                 >
-                  <li><a href="">collection</a></li>
-                  <li><a href="">men</a></li>
-                  <li><a href="">women</a></li>
-                  <li><a href="">about</a></li>
-                  <li><a href="">contact</a></li>
+                  <li>
+                    <a
+                      href=""
+                      class="hover:text-[#68707d] transition-all md:active:after:border md:after:border-[#ff7d1a] md:after:flex md:after:absolute md:after:w-16 md:after:-bottom-[30px]"
+                      >collection</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="hover:text-[#68707d] transition-all md:active:after:border md:after:border-[#ff7d1a] md:after:flex md:after:absolute md:after:w-16 md:after:-bottom-[30px]"
+                      >men</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="hover:text-[#68707d] transition-all md:active:after:border md:after:border-[#ff7d1a] md:after:flex md:after:absolute md:after:w-16 md:after:-bottom-[30px]"
+                      >women</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="hover:text-[#68707d] transition-all md:active:after:border md:after:border-[#ff7d1a] md:after:flex md:after:absolute md:after:w-16 md:after:-bottom-[30px]"
+                      >about</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="hover:text-[#68707d] transition-all md:active:after:border md:after:border-[#ff7d1a] md:after:flex md:after:absolute md:after:w-16 md:after:-bottom-[30px]"
+                      >contact</a
+                    >
+                  </li>
                 </ul>
               </div>
             </nav>
           </div>
 
-          <div class="flex items-center gap-3">
-            <div><img src="../assets/images/icon-cart.svg" alt="" /></div>
-            <div>
-              <img class="h-8" src="../assets/images/image-avatar.png" alt="" />
+          <div class="relative flex md:w-80 justify-end">
+            <div class="flex items-center gap-3 justify-end">
+              <div class="drop-cart">
+                <img src="../assets/images/icon-cart.svg" alt="" />
+              </div>
+              <div
+                class="border-2 rounded-full border-transparent active:border-[#ff7d1a] drop-cart"
+              >
+                <img
+                  class="h-8"
+                  src="../assets/images/image-avatar.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div
+              class="hidden absolute z-20 shadow-2xl bg-white top-[3.2rem] h-[200px] md:top-[3.7rem] w-80 md:-right-8 rounded md:w-full shop-list"
+            >
+              <div class="border-b-2 px-4 py-3">
+                <h5 class="capitalize text-base font-bold">cart</h5>
+              </div>
+              <div
+                class="mt-14 font-bold text-[#68707d] justify-center flex items-center"
+              >
+                Your cart is empty.
+              </div>
+              <div class="hidden p-4 text-[#68707d]">
+                <div class="flex gap-3">
+                  <div class="[&>*]:h-10 [&>*]:rounded">
+                    <img
+                      src="../assets/images/image-product-1-thumbnail.jpg"
+                      alt=""
+                    />
+                  </div>
+
+                  <div>
+                    <p class="capitalize w-full">
+                      fall limited edition sneakers
+                    </p>
+                    <div class="flex gap-2">
+                      <p><span>&dollar;</span><span>125.00</span></p>
+                      <span>&times;</span>
+                      <span>3</span>
+                      <p><span>&dollar;</span><span>375.00</span></p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <img src="../assets/images/icon-delete.svg" alt="" />
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <input
+                    type="button"
+                    class="bg-[#ff7d1a] shadow-2xl shadow-[#ffede0] p-3 text-white rounded-lg active:opacity-60 w-full"
+                    value="check out"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </header>
 
-      <main class="max-w-5xl m-auto sm:mt-12 sm:flex sm:items-center sm:gap-12">
-        <div class="relative m-auto sm:flex sm:flex-col sm:gap-4">
+      <main
+        class="max-w-[60rem] min-w-[345px] m-auto md:mt-12 md:flex md:items-center md:gap-12"
+      >
+        <div class="relative m-auto md:flex md:flex-col md:gap-4">
           <div class="mySlides fade">
             <div
-              class="text-[#f2f2f2] text-xs py-2 px-3 absolute top-0 sm:hidden numbertext"
+              class="text-[#f2f2f2] text-xs py-2 px-3 absolute top-0 md:hidden numbertext"
             >
               1 / 4
             </div>
@@ -97,7 +186,7 @@
 
           <div class="mySlides fade">
             <div
-              class="text-[#f2f2f2] sm:hidden text-xs py-2 px-3 absolute top-0 numbertext"
+              class="text-[#f2f2f2] md:hidden text-xs py-2 px-3 absolute top-0 numbertext"
             >
               2 / 4
             </div>
@@ -109,7 +198,7 @@
 
           <div class="mySlides fade">
             <div
-              class="text-[#f2f2f2] sm:hidden text-xs py-2 px-3 absolute top-0 numbertext"
+              class="text-[#f2f2f2] md:hidden text-xs py-2 px-3 absolute top-0 numbertext"
             >
               3 / 4
             </div>
@@ -119,9 +208,9 @@
             />
           </div>
 
-          <div class="mySlides fade ">
+          <div class="mySlides fade">
             <div
-              class="text-[#f2f2f2] sm:hidden text-xs py-2 px-3 absolute top-0 numbertext"
+              class="text-[#f2f2f2] md:hidden text-xs py-2 px-3 absolute top-0 numbertext"
             >
               4 / 4
             </div>
@@ -132,38 +221,38 @@
           </div>
 
           <a
-            class="cursor-pointer absolute top-[50%] w-12 h-12 m-4 p-4 bg-white font-bold active:bg-[#000000cc] text-lg rounded-full sm:hidden prev"
+            class="cursor-pointer absolute top-[50%] w-12 h-12 m-4 p-4 bg-white font-bold active:bg-[#000000cc] text-lg rounded-full md:hidden prev"
             onclick="plusSlides(-1)"
           >
             <img src="../assets/images/icon-previous.svg" alt="" />
           </a>
           <a
-            class="cursor-pointer absolute top-[50%] w-12 h-12 m-4 p-4 bg-white sm:hidden font-bold active:bg-[#000000cc] text-lg rounded-full right-0 next"
+            class="cursor-pointer absolute top-[50%] w-12 h-12 m-4 p-4 bg-white md:hidden font-bold active:bg-[#000000cc] text-lg rounded-full right-0 next"
             onclick="plusSlides(1)"
           >
             <img src="../assets/images/icon-next.svg" alt="" />
           </a>
 
-          <div class="hidden sm:flex sm:gap-4 [&>*>*]:rounded-md ">
-            <div>
+          <div class="hidden md:flex md:gap-4 [&>*>*]:rounded-md">
+            <div class="active:opacity-40">
               <img
                 src="../assets/images/image-product-1-thumbnail.jpg"
                 alt=""
               />
             </div>
-            <div>
+            <div class="active:opacity-40">
               <img
                 src="../assets/images/image-product-1-thumbnail.jpg"
                 alt=""
               />
             </div>
-            <div>
+            <div class="active:opacity-40">
               <img
                 src="../assets/images/image-product-1-thumbnail.jpg"
                 alt=""
               />
             </div>
-            <div>
+            <div class="active:opacity-40">
               <img
                 src="../assets/images/image-product-1-thumbnail.jpg"
                 alt=""
@@ -173,7 +262,7 @@
         </div>
         <br />
 
-        <div class="text-center sm:hidden">
+        <div class="text-center md:hidden">
           <span
             class="h-3 w-3 mx-[2px] bg-[#bbb] rounded-full inline-block transition-all dot"
             onclick="currentSlide(1)"
@@ -197,7 +286,7 @@
             <h3 class="text-[#ff7d1a] font-bold small-caps tracking-[0.09em]">
               sneaker company
             </h3>
-            <h2 class="font-bold text-3xl capitalize sm:text-4xl ">
+            <h2 class="font-bold text-3xl capitalize md:text-4xl">
               fall limited edition sneakers
             </h2>
           </div>
@@ -206,30 +295,38 @@
             Featuring a durable rubber outer sole, they'll withstand everything
             the weather can offer.
           </p>
-          <div class="flex mt-4 justify-between items-center">
+          <div
+            class="flex mt-4 justify-between items-center md:items-start md:gap-1 md:flex-col"
+          >
             <div class="flex gap-3 items-center">
-              <h4 class="text-2xl font-bold">&dollar;125.00</h4>
+              <h4 class="text-2xl font-bold">
+                <span>&dollar;</span><span>125.00</span>
+              </h4>
               <p
                 class="text-[#ff7d1a] px-2 w-12 rounded bg-[#ffede0] font-bold"
               >
                 50%
               </p>
             </div>
-            <p class="text-[#68707d] font-semibold"><s>&dollar;250.00</s></p>
+            <p class="text-[#68707d] font-semibold">
+              <s><span>&dollar;</span><span>250.00</span></s>
+            </p>
           </div>
 
-          <div class="flex gap-4 flex-col">
+          <div class="flex gap-4 flex-col md:flex-row w-full mt-4">
             <ul
-              class="bg-[#f7f8fd] mt-4 flex justify-between p-3 rounded-lg items-center"
+              class="bg-[#f7f8fd] mt-4 md:mt-0 flex #b6bcc8 md:w-1/2 justify-between p-3 rounded-lg items-center"
             >
-              <li><img src="../assets/images/icon-minus.svg" alt="" /></li>
+              <li class="[&>*]:active:opacity-40">
+                <img src="../assets/images/icon-minus.svg" alt="" />
+              </li>
               <li class="font-bold">0</li>
-              <li>
+              <li class="[&>*]:active:opacity-40">
                 <img src="../assets/images/icon-plus.svg" alt="" />
               </li>
             </ul>
             <div
-              class="bg-[#ff7d1a] shadow-2xl shadow-[#ffede0] flex p-3 justify-center gap-4 text-white rounded-lg"
+              class="bg-[#ff7d1a] shadow-2xl shadow-[#ffede0] md:shadow-[#e99f6b] flex p-3 justify-center gap-4 text-white rounded-lg w-full active:opacity-60"
             >
               <img src="../assets/images/second-cart.svg" alt="" /><input
                 type="button"
